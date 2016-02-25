@@ -16,23 +16,20 @@ MongoClient.connect('mongodb://kpperez:kanye@ds015928.mongolab.com:15928/kanye-q
 
 app.set('view engine', 'ejs')
 app.use(bodyParser.urlencoded({extended: true}))
+app.use(bodyParser.json())
+app.use(express.static('public'))
 
-
-//* GET REQUEST = READ OPERATION *//
 app.get('/', (req, res) => {
   db.collection('quotes').find().toArray((err, result) => {
     if (err) return console.log(err)
-    // renders index.ejs
     res.render('index.ejs', {quotes: result})
   })
 })
 
-
 app.post('/quotes', (req, res) => {
   db.collection('quotes').save(req.body, (err, result) => {
     if (err) return console.log(err)
-
-    console.log('No one man should have all that power')
+    console.log('saved to database')
     res.redirect('/')
   })
 })
