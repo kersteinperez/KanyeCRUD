@@ -3,25 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <title>Kanye CRUD for Bowie</title>
+      <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  You have distracted from my creative process.
+
+
+  <h1>Our future president, Kanye West, has a lot to say.</h1>
+
+<h3>
+
 
 <ul class="quotes">
   <% for(var i=0; i<quotes.length; i++) {%>
     <li class="quote">
-      <span><%= quotes[i].name %></span>
       <span><%= quotes[i].quote %></span>
+      <span><%= quotes[i].name %></span>
     </li>
   <% } %>
 </ul>
+</h3>
+
+<h1>Let's keep track while we still can.</h1>
+<p><h4>Use the form below to add your favorite Kanye-ism<br> and what internet forum he used to enlighten us with his genius.</h4></p>
+
+
 
 <form action="/quotes" method="POST">
-    <input type="text" placeholder="name" name="name">
-    <input type="text" placeholder="quote" name="quote">
-    <button type="submit">Submit</button>
-  </form>
+<input type="text" placeholder="Quote" name="quote">
+<input type="text" placeholder="Forum" name="name">
+<button type="Primary">I'm the Greatest</button>
+</form>
 
-  
+
+
+
 </body>
 </html>
