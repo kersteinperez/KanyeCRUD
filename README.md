@@ -1,7 +1,7 @@
 # KanyeCRUD app for Bowie Students
 Hey Bowies. Here's an example app to hopefully make the whole world of Express, routes and CRUD a little easier to navigate. Note: I am using MongoDB as my database. Disregard if that will be confusing to you. This is more about the trouble with routes I've noticed.
 
-(https://cloud.githubusercontent.com/assets/14798929/13341435/ba9c6b32-dc06-11e5-929c-a023a473fc73.png)
+!(https://cloud.githubusercontent.com/assets/14798929/13341435/ba9c6b32-dc06-11e5-929c-a023a473fc73.png)
 
 In this app, I have 2 successful routes -- I know you can do the missing operations. Based on this, you should be able to:
 * Create an Express server
