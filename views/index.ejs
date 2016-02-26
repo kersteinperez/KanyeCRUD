@@ -14,6 +14,8 @@
 
 
 <ul class="quotes">
+
+  <!-- Loop through the quotes array and create strings ith the quotes[1].name + quotes[1].quote -->
   <% for(var i=0; i<quotes.length; i++) {%>
     <li class="quote">
       <span><%= quotes[i].quote %></span>
@@ -27,7 +29,9 @@
 <p><h4>Use the form below to add your favorite Kanye-ism<br> and what internet forum he used to enlighten us with his genius.</h4></p>
 
 
-
+<!-- FORM ELEMENTS EXPLAINED:
+A form element can trigger a POST request. In this example, we need an action, a method, and a name for each element. Action tells the browser what path to go to. Method tells the browser what to send, so a POST. Name is what it is.
+-->
 <form action="/quotes" method="POST">
 <input type="text" placeholder="Quote" name="quote">
 <input type="text" placeholder="Forum" name="name">
